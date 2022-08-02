@@ -1,4 +1,8 @@
-#like-button {
-    background-color: red;
+.simple-button {
+    background-color: #77b6c7;
+    color: white;
     border: 0;
+    border-radius: 10px;
+    min-width: 100px;
+    min-height: 50px;
 }
