@@ -5,4 +5,10 @@
     border-radius: 10px;
     min-width: 100px;
     min-height: 50px;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+}
+.simple-button:hover {
+    background-color: #224f5c;
+    color: white;
 }
