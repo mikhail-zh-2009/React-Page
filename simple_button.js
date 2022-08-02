@@ -6,21 +6,24 @@ class LikeButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      liked: false,
-      text:'Hello'
+      clicked: false
      };
   }
 
   render() {
-    if (this.state.liked) {
-      return 'You liked this.';
+    if(this.state.clicked) {
+      return e(
+        'button',
+        { id: "simple-button", onClick: () => this.setState({ clicked: !this.state.clicked }) },
+        'Goodbye'
+      );
+    } else {
+      return e(
+        'button',
+        { id: "simple-button", onClick: () => this.setState({ clicked: !this.state.clicked }) },
+        'Hello!'
+      );
     }
-
-    return e(
-      'button',
-      { class: "simple-button", onClick: () => this.setState({ liked: true }) },
-      this.state.text
-    );
   }
 }
 const domContainer = document.querySelector('#main');
