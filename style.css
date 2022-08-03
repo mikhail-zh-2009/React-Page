@@ -1,17 +1,19 @@
 .simple-button {
-    display: block;
+    display: inline-block;
     background-color: black;
     color: white;
     border: 0;
     border-radius: 10px;
     min-width: 100px;
     min-height: 50px;
-    transition-duration: 1s;
-    -webkit-transition-duration: 1s;
+    transition-duration: 200ms;
+    -webkit-transition-duration: 200ms;
 }
 .simple-button:hover {
     background-color: white;
     color: black;
 }
-#main {
+.simple-button:active {
+    background-color: black;
+    color: white;
 }
