@@ -2,7 +2,7 @@
 
 const e = React.createElement;
 
-class LikeButton extends React.Component {
+class SimpleButton extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -11,21 +11,11 @@ class LikeButton extends React.Component {
   }
 
   render() {
-    if(this.state.clicked) {
-      return e(
-        'button',
-        { id: "simple-button", onClick: () => this.setState({ clicked: !this.state.clicked }) },
-        'Goodbye'
-      );
-    } else {
-      return e(
-        'button',
-        { id: "simple-button", onClick: () => this.setState({ clicked: !this.state.clicked }) },
-        'Hello!'
-      );
-    }
+    if(this.state.clicked)
+      return <button class="simple-button" onclick="this.setState({clicked: !this.state.clicked})">Goodbye</button>
+    return <button class="simple-button" onclick="this.setState({clicked: !this.state.clicked})">Hello</button>
   }
 }
 const domContainer = document.querySelector('#main');
 const root = ReactDOM.createRoot(domContainer);
-root.render(e(LikeButton));
+root.render(<SimpleButton/>);
