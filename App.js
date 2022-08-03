@@ -6,9 +6,7 @@ class Button extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isToggleOn: true,
-            onText: '',
-            offText: '',
+            text: ''
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -16,41 +14,23 @@ class Button extends React.Component {
     clickEvent() {}
 
     handleClick() {
-        this.setState(prevState => ({
-        isToggleOn: !prevState.isToggleOn
-        }));
         this.clickEvent();
     }
 
     render() {
         return (
         <button class="simple-button" onClick={this.handleClick}>
-            {this.state.isToggleOn ? this.state.offText : this.state.onText}
+            {this.state.text}
         </button>
         );
     }
 }
 
-class LikeButton extends Button {
+class NumberButton extends Button {
     constructor(props) {
         super(props);
         this.state = {
-            onText: 'Like',
-            offText: 'Unlike'
-        };
-        this.handleClick = this.handleClick.bind(this);
-    }
-    clickEvent() {
-        
-    }
-}
-
-class SubscribeButton extends Button {
-    constructor(props) {
-        super(props);
-        this.state = {
-            onText: 'Subscribe',
-            offText: 'Unsubscribe',
+            text: '',
         };
         this.handleClick = this.handleClick.bind(this);
     }
@@ -65,7 +45,7 @@ function Print() {
 
 function App() {
     return <div>
-        <LikeButton/> <SubscribeButton/>
+        <NumberButton state={{text:"q"}}/>
     </div>
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
