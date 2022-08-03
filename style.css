@@ -1,13 +1,18 @@
+* {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
 .simple-button {
     display: inline-block;
     background-color: black;
     color: white;
     border: 0;
-    border-radius: 15px;
-    min-width: 5%;
-    min-height: 5vh;
+    border-radius: 0px;
+    min-width: 25%;
+    min-height: 20vh;
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
+    font-size: 10vh;
 }
 .simple-button:hover {
     background-color: white;
@@ -16,4 +21,15 @@
 .simple-button:active {
     background-color: black;
     color: white;
+}
+.simple-text-field { 
+    font-size: 15vh;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 0px;
+    min-width: 100%;
+    min-height: 20vh;
+    max-width: 100%;
 }
