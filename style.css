@@ -2,13 +2,15 @@
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
 }
+/* Buttons code */
 .simple-button {
+    white-space: nowrap;
     display: inline-block;
     background-color: black;
     color: white;
     border: 0;
     border-radius: 0px;
-    min-width: 25%;
+    min-width: 20%;
     min-height: 20vh;
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
@@ -22,14 +24,15 @@
     background-color: black;
     color: white;
 }
+/* Text field code */
 .simple-text-field { 
+    white-space: nowrap;
     font-size: 15vh;
-    display: inline-block;
+    display: flex;
     background-color: black;
     color: white;
     border: 0;
     border-radius: 0px;
     min-width: 100%;
     min-height: 20vh;
-    max-width: 100%;
 }
