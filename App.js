@@ -3,14 +3,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 var fieldText = ' '
 
 function Equals() {
+    root.render(<App/>)
     var text = fieldText.trim().split(' ')
     var result = Number(text[0])
-    for(var i in text) {
+    for(var i = 0; i < text.length; i++) {
         if(text[i] == '+')
-            fieldText = (text[i + 1])
+            result += Number(text[i + 1])
+        if(text[i] == '-')
+            result -= Number(text[i + 1])
     }
     fieldText = result
-    root.render(<App/>)
 }
 
 // Button main class for "calculator"
