@@ -4,7 +4,6 @@
 }
 /* Buttons code */
 .simple-button {
-    white-space: nowrap;
     display: inline-block;
     background-color: black;
     color: white;
@@ -14,7 +13,7 @@
     min-height: 20vh;
     transition-duration: 200ms;
     -webkit-transition-duration: 200ms;
-    font-size: 10vh;
+    font-size: 3vh;
 }
 .simple-button:hover {
     background-color: white;
@@ -26,8 +25,7 @@
 }
 /* Text field code */
 .simple-text-field { 
-    white-space: nowrap;
-    font-size: 15vh;
+    font-size: 3vh;
     display: flex;
     background-color: black;
     color: white;
