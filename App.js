@@ -32,7 +32,7 @@ function Equals(source) {
             result **= Number(text[i + 1])
     }
     if(result == NaN || result == Infinity) {
-        fieldText = 'Result too big or not a number'
+        fieldText = 'Result too long or not a number'
         setTimeout(function() {
             fieldText = ''
         }, (1000))
