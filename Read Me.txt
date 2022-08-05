@@ -1,0 +1,1 @@
+This is Calculator. It can calculate expressions and have design. I made it using ReactJS framework. For launch it start a server.
