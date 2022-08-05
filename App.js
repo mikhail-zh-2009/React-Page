@@ -31,8 +31,12 @@ function Equals(source) {
         if(text[i] == '^')
             result **= Number(text[i + 1])
     }
-    if(result == NaN || result == Infinity)
+    if(result == NaN || result == Infinity) {
         fieldText = 'Result too big or not a number'
+        setTimeout(function() {
+            fieldText = ''
+        }, (1000))
+    }
     else
         fieldText = result
 }
