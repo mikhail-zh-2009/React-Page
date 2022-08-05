@@ -11,7 +11,7 @@ function Check() {
     }
 }
 
-setInterval(Check, 100);
+setInterval(Check, 100)
 
 
 // This function calls when user presses '='
@@ -31,7 +31,10 @@ function Equals(source) {
         if(text[i] == '^')
             result **= Number(text[i + 1])
     }
-    fieldText = result
+    if(result == NaN || result == Infinity)
+        fieldText = 'Result too big or not a number'
+    else
+        fieldText = result
 }
 
 // Button main class
